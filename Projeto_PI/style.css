@@ -1,104 +1,159 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
 
-  body {
-    background-color: #f8f8f8;
-  }
+body {
+  background-color: #F2F2F2;
+}
 
-  header {
-    background-color: #861c1c;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-  }
-  .logo{
-    width: 80px;  
-  height: auto;
-  }
-  .logo-icon{
-    width: 80px; 
-    height: auto;
-  }
+header {
+  background-color: #5B1B1A;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
 
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-  }
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
 
-  .agendar {
-    background-color: white;
-    color: #861c1c;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-  }
+.somos {
+  background-color: #5B1B1A;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 15px;
+  transition: background-color 0.25s ease-in-out;
+}
 
-  .main-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 40px;
-    background-color: white;
-  }
+.somos:hover {
+  background-color: white;
+  color: #5B1B1A;
+  padding: 10px 10px;
+  border-radius: 15px;
+  transition: background-color 0.25s ease-in-out;
+}
 
-  .main-text {
-    font-size: 2rem;
-    color: #222;
-    max-width: 40%;
-  }
+.contato {
+  background-color: #5B1B1A;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 15px;
+  transition: background-color 0.25s ease-in-out;
+}
 
-  .main-text span {
-    display: block;
-    margin-bottom: 10px;
-  }
+.contato:hover {
+  background-color: white;
+  color: #5B1B1A;
+  padding: 10px 10px;
+  border-radius: 15px;
+  transition: background-color 0.25s ease-in-out;
+}
 
-  .arrow {
-    font-size: 2rem;
-    margin-top: 20px;
-  }
 
-  .carousel {
-    max-width: 50%;
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-  }
+.agendar {
+  background-color: white;
+  color: #5B1B1A;
+  padding: 10px 20px;
+  border-radius: 15px;
+  transition: background-color 0.25s ease-in-out;
+}
 
-  .carousel img {
-    width: 150px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.agendar:hover {
+  background-color: #5B1B1A;
+  color: #F2F2F2;
+  padding: 10px 20px;
+  border-radius: 15px;
+  transition: background-color 0.25s ease-in-out;
+}
 
-  }
+.secao-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  background-color: white;
+}
 
-  .scroll-down {
-    text-align: center;
-    font-size: 2rem;
-    color: #861c1c;
-  }
-  footer {
-    background-color: #861c1c;
-    color: white;
-    padding: 5px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;}
-    .info {
-        margin: 5px 0;
-    }
-    .label{
-        background-color:#861c1c ;
-        
-    }
-    
+.texto-principal {
+  font-size: 45px;
+  color: #000000;
+  max-width: 40%;
+}
+
+.main-text span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.arrow {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.carousel {
+  max-width: 50%;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.scroll-down {
+  text-align: center;
+  font-size: 2rem;
+  color: #5B1B1A;
+}
+
+footer {
+  background-color: #5B1B1A;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.info {
+  margin: 5px 0;
+}
+
+.label {
+  background-color: #5B1B1A;
+
+}
+
+.resultados {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20pxpx;
+}
+
+.resultado-1 {
+  height: 650px;
+  border-radius: 75px;
+  position: relative;
+  right: 85px;
+  z-index: 2;
+}
+
+.resultado-2 {
+  height: 630px;
+  border-radius: 75px;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  transform: rotate(1.5deg);
+  z-index: 1;
+}
