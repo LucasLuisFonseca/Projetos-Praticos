@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+main{
+  flex: 1;
 }
 
 body {
@@ -25,6 +30,22 @@ nav a {
   text-decoration: none;
 }
 
+.sobre {
+  background-color: #5B1B1A;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 15px;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.sobre:hover {
+  background-color: white;
+  color: #5B1B1A;
+  padding: 10px 10px;
+  border-radius: 15px;
+  transition: background-color 0.25s ease-in-out;
+}
+
 .somos {
   background-color: #5B1B1A;
   color: white;
@@ -41,7 +62,7 @@ nav a {
   transition: background-color 0.25s ease-in-out;
 }
 
-.contato {
+.contat {
   background-color: #5B1B1A;
   color: white;
   padding: 10px 10px;
@@ -49,7 +70,7 @@ nav a {
   transition: background-color 0.25s ease-in-out;
 }
 
-.contato:hover {
+.contat:hover {
   background-color: white;
   color: #5B1B1A;
   padding: 10px 10px;
@@ -67,7 +88,7 @@ nav a {
 }
 
 .agendar:hover {
-  background-color: #5B1B1A;
+  background-color: #11751d;
   color: #F2F2F2;
   padding: 10px 20px;
   border-radius: 15px;
@@ -75,15 +96,20 @@ nav a {
 }
 
 .secao-principal {
+  height: 100vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 60px 40px;
+  align-items: flex-start;
+  padding: 20px 40px;
+  padding-top:6rem;
   background-color: #F2F2F2;
+
 }
 
 .texto-principal {
-  font-size: 45px;
+  padding-top: 10rem;
+  padding-left: 8rem;
+  font-size: 60px;
   color: #000000;
   max-width: 40%;
 }
@@ -91,7 +117,6 @@ nav a {
 .texto-principal span {
   display: block;
   margin-bottom: 10px;
-  margin-left: 70px;
 }
 
 
@@ -101,7 +126,6 @@ footer {
   padding: 5px;
   text-align: center;
   font-size: 15px;
-  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -117,26 +141,152 @@ footer {
   align-items: center;
   gap: 15px;
   margin-right: 70px;
+  flex-wrap: wrap;
 }
 
 .resultado-1 {
-  height: 650px;
+  width: 100vw;
+  max-width: 700px;
   border-radius: 75px;
   position: relative;
-  right: 85px;
-  z-index: 2;;
-  max-width: 100%;
+  right: 4vw;
+  z-index: 2;
 }
 
 .resultado-2 {
-  height: 630px;
+  width: 100vw;
+  max-width: 700px;
   border-radius: 75px;
   position: absolute;
-  top: 30px;
-  left: 20px;
+  top: 2vw;
+  left: 2vw;
   transform: rotate(1.5deg);
   z-index: 1;
-  max-width: 100%;
+}
+
+
+.secao-secundaria{
+  height: 100vh;
+  background-color: #5B1B1A;
+  padding: 7rem;
+}
+
+.titulo-secundario{
+  color: #F2F2F2;
+  font-size: 60px;
+}
+
+.texto-secundario{
+  color: #F2F2F2;
+  font-size: 32px;
+}
+
+.secao-terciaria{
+  height: 100vh;
+  background-color: #F2F2F2;
+  padding: 7rem;
+}
+
+.titulo-terciario{
+  color: #5B1B1A;
+  font-size: 60px;
+}
+
+.text-3 {
+  color: #5B1B1A;
+  font-size: 32px;
+}
+
+.texto-terciario h1{
+  color: #5B1B1A;
+  font-size: 32px;
+}
+
+.fale{
+  color: #000000;
+  font-size: 32px;
+}
+
+.info-contato{
+  padding-top: 2rem;
+  padding-left: 10rem;
+}
+
+
+
+.contato-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 10%;
+  background: #F2F2F2;
+}
+
+/* Formulário */
+.form-contato {
+  flex: 1 1 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-contato label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.form-contato button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  background-color: #5B1B1A;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-contato button:hover {
+  background-color: #702c2b;
+}
+
+/* Informações de contato */
+.info-contato {
+  flex: 1 1 300px;
+}
+
+
+.info-contato p {
+  color: #000000;
+  font-size: 32px;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.sub-titulo2{
+  font-size: 32px;
+  color: #5B1B1A;
+}
+
+.social-icons a {
+  font-size: 48px;
+
+  margin-right: 15px;
+  color: #000;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #5B1B1A;
 }
 
 Página Agendamento
@@ -209,3 +359,8 @@ Página Agendamento
 }
 
 
+@media screen and (max-width: 768px) {
+ .header{
+  display: none;
+ } 
+}
