@@ -359,8 +359,101 @@ Página Agendamento
 }
 
 
-@media screen and (max-width: 768px) {
- .header{
-  display: none;
- } 
+@media (max-width: 1015px) {
+
+  header{
+    justify-content: center
+  }
+
+  nav a{
+    display: none;
+  }
+
+  .secao-principal{
+    flex-direction: column;
+    height: 120vh;
+    padding-top: 1rem;
+  }
+
+  .texto-principal{
+    padding-top: 2rem;
+    padding-left: 1rem;
+    font-size: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .texto-principal i{
+    transform: rotate(90deg);
+    padding-left: 3rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .resultados{
+    padding-bottom: 5rem;
+  }
+  
+  .resultado-1{
+    width: 50vh;
+  }
+
+  .resultado-2{
+    width: 50vh;
+  }
+
+  .secao-secundaria{
+    height: 100vh;
+    padding: 2rem;
+  }
+
+  .titulo-secundario{
+    font-size: 40px;
+    padding-bottom: 2rem;
+  }
+
+  .texto-secundario{
+    font-size: 20px;
+    flex-wrap: wrap;
+  }
+
+  .secao-terciaria{
+    padding: 2rem;
+    flex-direction: column;
+    height: 180vh;
+  }
+
+  .info-contato{
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+
+  .titulo-terciario{
+    font-size: 40px;
+  }
+
+  .fale{
+    font-size: 28px;
+  }
+
+  .text-3{
+    font-size: 20px;
+  }
+
+  .contato-container{
+    padding: 40px;
+  }
+
+  .sub-titulo2{
+    font-size: 29px;
+  }
+
+  .info-contato p{
+    font-size: 26px;
+  }
+
+  .social-icons a{
+    font-size: 40px;
+    padding-left: 2rem;
+  }
+  
 }
