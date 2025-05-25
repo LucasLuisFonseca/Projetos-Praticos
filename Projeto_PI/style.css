@@ -302,7 +302,7 @@ Página Agendamento
     padding: 2rem;
     background-color: #5B1B1A;
     border-radius: 50px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     margin-top: 20px;
 }
 
@@ -313,6 +313,7 @@ Página Agendamento
 
   label {
     margin-top: 10px;
+    color: white;
 }
 
   input, select {
