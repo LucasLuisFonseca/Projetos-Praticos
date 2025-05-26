@@ -458,5 +458,23 @@ Página Agendamento
     font-size: 40px;
     padding-left: 2rem;
   }
-  
+  .equipe-container{
+ padding: 40px; 
+}
+
+}
+.card-fer{
+  margin: 30px;
+  height: 400px;
+  width: 300px;
+}
+.container-fer{
+  margin: 30px;
+  display: flex;
+  align-items:initial;
+}
+.p-fer{
+  display: flex;
+  align-items:flex-start;
+  color:#5B1B1A;
 }
