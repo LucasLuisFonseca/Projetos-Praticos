@@ -18,29 +18,30 @@
             <h1>OdontoMed Agendamentos</h1>
         </div>
     </header>
+
     <div class="container">
         <h2 class="subtitulo">AGENDAMENTO</h2>
         <form>
             <label for="nome">Nome Completo</label>
-            <input type="text" id="nome" name="nome" required>
+            <input type="text" id="nome" name="nome" required placeholder="Nome Completo">
             
             
             <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" name="telefone" required>
+            <input type="tel" id="telefone" name="telefone" required placeholder="(00)0000-0000 ">
             
             <label for="data">Data da Consulta</label>
-            <input type="date" id="data" name="data" required>
+            <input type="date" id="data" name="data" required placeholder="Data da Consulta">
             
             <label for="hora">Horário</label>
-            <input type="time" id="hora" name="hora" required>
+            <input type="time" id="hora" name="hora" required placeholder="Horário">
             
             <label for="especialidade">Serviço</label>
             <select id="especialidade" name="especialidade" required>
-                <option value="selecione">Selecione uma Opção</option>
-                <option value="dentista-geral">Manutenção</option>
-                <option value="ortodontista">Limpeza</option>
-                <option value="endodontista">Canal</option>
-                <option value="implantodontista">Cirurgia</option>
+                <option value="selecione"  class="opcao">Selecione uma Opção</option>
+                <option value="dentista-geral" class="opcao">Manutenção</option>
+                <option value="ortodontista" class="opcao">Limpeza</option>
+                <option value="endodontista" class="opcao">Canal</option>
+                <option value="implantodontista" class="opcao">Cirurgia</option>
             </select>
             <div class="botao">
             <button type="submit">AGENDAR CONSULTA</button>

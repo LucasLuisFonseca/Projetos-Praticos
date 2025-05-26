@@ -302,7 +302,7 @@ Página Agendamento
     padding: 2rem;
     background-color: #5B1B1A;
     border-radius: 50px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     margin-top: 20px;
 }
 
@@ -313,6 +313,7 @@ Página Agendamento
 
   label {
     margin-top: 10px;
+    color: white;
 }
 
   input, select {
@@ -332,7 +333,8 @@ Página Agendamento
     cursor: pointer;
     font-size: 1rem;
     margin-top: 50px;
-    transition: ease-in-out 0.2s;
+   
+    
 }
 
   button:hover {
@@ -343,6 +345,7 @@ Página Agendamento
 
 .botao {
   text-align: center;
+  border-radius: 35px;
 }
 
 .titulo {
@@ -455,5 +458,23 @@ Página Agendamento
     font-size: 40px;
     padding-left: 2rem;
   }
-  
+  .equipe-container{
+ padding: 40px; 
+}
+
+}
+.card-fer{
+  margin: 30px;
+  height: 400px;
+  width: 300px;
+}
+.container-fer{
+  margin: 30px;
+  display: flex;
+  align-items:initial;
+}
+.p-fer{
+  display: flex;
+  align-items:flex-start;
+  color:#5B1B1A;
 }
