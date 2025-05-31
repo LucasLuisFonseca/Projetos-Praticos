@@ -467,13 +467,66 @@ Página Agendamento
   margin: 30px;
   height: 400px;
   width: 300px;
+  border-radius:30%;
 }
-.container-fer{
+.container-fer{  
   margin: 30px;
   display: flex;
   align-items:initial;
+
 }
+
 .p-fer{
+  display: flex;
+  align-items:flex-start;
+  color:#5B1B1A;
+}
+
+.ana{
+border-radius: 1px;
+padding: 3px;
+flex-direction: column;
+}
+.card-ana{
+  margin: 30px;
+  height: 400px;
+  width: 300px;
+  border-radius:30%;
+}
+.container-ana{
+    margin: 30px;
+  display: flex;
+  align-items:initial;
+}
+
+.p-ana{
+  font-size: 35px;
+  display: flex;
+  align-items:flex-start;
+  color:#5B1B1A;
+}
+
+.renata{
+border-radius: 1px;
+padding: 3px;
+flex-direction: column;
+}
+
+.card-ren{
+  margin: 30px;
+  height: 400px;
+  width: 300px;
+  border-radius:30%;
+}
+
+.container-ren{
+   margin:30px;
+  display:flex;
+  align-items:initial;
+}
+
+.p-ren{
+  font-size: 35px;
   display: flex;
   align-items:flex-start;
   color:#5B1B1A;
