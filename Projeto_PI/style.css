@@ -128,6 +128,7 @@ footer {
   font-size: 15px;
   bottom: 0;
   width: 100%;
+  position: fixed;
 }
 
 .info {
@@ -463,17 +464,26 @@ Página Agendamento
 }
 
 }
-.card-fer{
+.dentista{
+border-radius: 1px;
+padding: 3px;
+flex-direction: column;
+}
+
+.card-dent{
   margin: 30px;
   height: 400px;
   width: 300px;
+  border-radius:30%;
 }
-.container-fer{
-  margin: 30px;
-  display: flex;
+
+.container-dent{
+  margin:30px;
+  display:flex;
   align-items:initial;
 }
-.p-fer{
+.p-dent{
+  font-size: 33px;
   display: flex;
   align-items:flex-start;
   color:#5B1B1A;
