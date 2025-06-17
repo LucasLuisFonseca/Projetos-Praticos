@@ -1,490 +1,666 @@
+/* Base Styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  scroll-behavior: smooth;
-}
-
-main{
-  flex: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-  background-color: #F2F2F2;
+    background-color: #F2F2F2;
 }
 
+main {
+    flex: 1;
+}
+
+/* Header */
 header {
-  background-color: #5B1B1A;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  font-size: 1.5rem;
+    background-color: #5B1B1A;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    flex-wrap: wrap; /* Allows header items to wrap on smaller screens */
 }
 
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
+header .logo img {
+    height: 70px;
 }
 
-.sobre {
-  background-color: #5B1B1A;
-  color: white;
-  padding: 10px 10px;
-  border-radius: 15px;
-  transition: background-color 0.25s ease-in-out;
+nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Allows nav links to wrap */
+    justify-content: center; /* Center nav links on wrap */
 }
 
-.sobre:hover {
-  background-color: white;
-  color: #5B1B1A;
-  padding: 10px 10px;
-  border-radius: 15px;
-  transition: background-color 0.25s ease-in-out;
+.nav-link, .nav-link-highlight {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
-.somos {
-  background-color: #5B1B1A;
-  color: white;
-  padding: 10px 10px;
-  border-radius: 15px;
-  transition: background-color 0.25s ease-in-out;
+.nav-link {
+    background-color: #5B1B1A;
 }
 
-.somos:hover {
-  background-color: white;
-  color: #5B1B1A;
-  padding: 10px 10px;
-  border-radius: 15px;
-  transition: background-color 0.25s ease-in-out;
+.nav-link:hover {
+    background-color: white;
+    color: #5B1B1A;
 }
 
-.contat {
-  background-color: #5B1B1A;
-  color: white;
-  padding: 10px 10px;
-  border-radius: 15px;
-  transition: background-color 0.25s ease-in-out;
+.nav-link-highlight {
+    background-color: white;
+    color: #5B1B1A;
 }
 
-.contat:hover {
-  background-color: white;
-  color: #5B1B1A;
-  padding: 10px 10px;
-  border-radius: 15px;
-  transition: background-color 0.25s ease-in-out;
+.nav-link-highlight:hover {
+    background-color: #11751d;
+    color: #F2F2F2;
 }
 
-
-.agendar {
-  background-color: white;
-  color: #5B1B1A;
-  padding: 10px 20px;
-  border-radius: 15px;
-  transition: background-color 0.25s ease-in-out;
+/* Hero Section (secao-principal) */
+.hero-section {
+    min-height: 100vh; /* Changed to min-height for flexibility */
+    display: flex;
+    justify-content: space-around; /* Changed to space-around for better spacing */
+    align-items: center; /* Center vertically */
+    padding: 6rem 40px 20px; /* Adjusted padding */
+    background-color: #F2F2F2;
+    flex-wrap: wrap; /* Allows content to wrap */
+    gap: 20px; /* Gap between text and images */
 }
 
-.agendar:hover {
-  background-color: #11751d;
-  color: #F2F2F2;
-  padding: 10px 20px;
-  border-radius: 15px;
-  transition: background-color 0.25s ease-in-out;
+.hero-text {
+    font-size: clamp(2.5rem, 6vw, 3.75rem); /* Responsive font size */
+    color: #000000;
+    text-align: left; /* Aligned text to left */
+    flex: 1 1 40%; /* Flexible width, min 40% */
+    min-width: 300px; /* Minimum width for the text block */
+    padding-left: 2rem;
 }
 
-.secao-principal {
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px 40px;
-  padding-top:6rem;
-  background-color: #F2F2F2;
-
+.hero-text span {
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
-.texto-principal {
-  padding-top: 10rem;
-  padding-left: 8rem;
-  font-size: 60px;
-  color: #000000;
-  max-width: 40%;
+.hero-icon {
+    font-size: clamp(2rem, 5vw, 3.75rem); /* Responsive icon size */
+    vertical-align: middle;
+    margin-left: 10px;
 }
 
-.texto-principal span {
-  display: block;
-  margin-bottom: 10px;
+.results-images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Take full width on smaller screens */
+    max-width: 800px; /* Max width for image container */
+    height: 450px; /* Fixed height to manage overlapping images */
+    margin: 20px auto; /* Center images */
 }
 
-
-footer {
-  background-color: #5B1B1A;
-  color: white;
-  padding: 5px;
-  text-align: center;
-  font-size: 15px;
-  bottom: 0;
-  width: 100%;
-  position: fixed;
+.result-image {
+    width: 100%;
+    max-width: 600px; /* Max width for individual images */
+    border-radius: 75px;
+    position: absolute;
+    object-fit: cover; /* Ensure images cover their area */
 }
 
-.info {
-  margin: 5px 0;
+.result-image-1 {
+    z-index: 2;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.resultados {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-right: 70px;
-  flex-wrap: wrap;
+.result-image-2 {
+    z-index: 1;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(1.5deg);
 }
 
-.resultado-1 {
-  width: 100vw;
-  max-width: 700px;
-  border-radius: 75px;
-  position: relative;
-  right: 4vw;
-  z-index: 2;
+/* About Section (secao-secundaria) */
+.about-section, .contact-section, .team-section {
+    background-color: #5B1B1A; /* Default background */
+    padding: 7rem 5%; /* Adjusted padding */
+    color: #F2F2F2;
+    min-height: 100vh; /* Ensure section takes at least full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.resultado-2 {
-  width: 100vw;
-  max-width: 700px;
-  border-radius: 75px;
-  position: absolute;
-  top: 2vw;
-  left: 2vw;
-  transform: rotate(1.5deg);
-  z-index: 1;
+.contact-section, .team-section {
+    background-color: #F2F2F2;
+    color: #5B1B1A;
 }
 
 
-.secao-secundaria{
-  height: 100vh;
-  background-color: #5B1B1A;
-  padding: 7rem;
+.section-title {
+    font-size: clamp(2.5rem, 5vw, 3.75rem); /* Responsive font size */
+    margin-bottom: 2rem;
+    color: inherit; /* Inherit color from parent section */
 }
 
-.titulo-secundario{
-  color: #F2F2F2;
-  font-size: 60px;
+.section-text {
+    font-size: clamp(1rem, 2.5vw, 2rem); /* Responsive font size */
+    line-height: 1.6;
 }
 
-.texto-secundario{
-  color: #F2F2F2;
-  font-size: 32px;
+/* Contact Section (secao-terciaria) */
+.contact-prompt, .team-prompt {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 2rem;
+    color: #000000;
 }
 
-.secao-terciaria{
-  height: 100vh;
-  background-color: #F2F2F2;
-  padding: 7rem;
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjusted for better spacing */
+    gap: 40px;
+    padding: 20px 0;
 }
 
-.titulo-terciario{
-  color: #5B1B1A;
-  font-size: 60px;
+.contact-form {
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
 }
 
-.text-3 {
-  color: #5B1B1A;
-  font-size: 32px;
+.contact-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: inherit; /* Inherit color from parent section */
 }
 
-.texto-terciario h1{
-  color: #5B1B1A;
-  font-size: 32px;
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
 }
 
-.fale{
-  color: #000000;
-  font-size: 32px;
+.contact-form button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    border: none;
+    background-color: #5B1B1A;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.info-contato{
-  padding-top: 2rem;
-  padding-left: 10rem;
+.contact-form button:hover {
+    background-color: #702c2b;
 }
 
-
-
-.contato-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 60px 10%;
-  background: #F2F2F2;
+.contact-info {
+    flex: 1 1 300px;
 }
 
-/* Formulário */
-.form-contato {
-  flex: 1 1 350px;
-  display: flex;
-  flex-direction: column;
+.contact-subtitle {
+    font-size: clamp(1.2rem, 2.5vw, 2rem); /* Responsive font size */
+    color: #5B1B1A;
+    margin-top: 1rem;
 }
 
-.form-contato label {
-  margin: 10px 0 5px;
-  font-weight: bold;
-}
-
-.form-contato input,
-.form-contato textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-}
-
-.form-contato button {
-  margin-top: 20px;
-  padding: 12px 24px;
-  border: none;
-  background-color: #5B1B1A;
-  color: white;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.form-contato button:hover {
-  background-color: #702c2b;
-}
-
-/* Informações de contato */
-.info-contato {
-  flex: 1 1 300px;
-}
-
-
-.info-contato p {
-  color: #000000;
-  font-size: 32px;
-  margin: 8px 0;
-  line-height: 1.6;
-}
-
-.sub-titulo2{
-  font-size: 32px;
-  color: #5B1B1A;
+.contact-info p {
+    color: #000000;
+    font-size: clamp(1rem, 2vw, 2rem);
+    margin: 8px 0;
+    line-height: 1.6;
 }
 
 .social-icons a {
-  font-size: 48px;
-
-  margin-right: 15px;
-  color: #000;
-  text-decoration: none;
+    font-size: clamp(2rem, 4vw, 3rem); /* Responsive icon size */
+    margin-right: 15px;
+    color: #000;
+    text-decoration: none;
 }
 
 .social-icons a:hover {
-  color: #5B1B1A;
+    color: #5B1B1A;
 }
 
-Página Agendamento
-  body {
-    margin: 0;
-    padding: 0;
+/* Team Section */
+.team-section {
     background-color: #F2F2F2;
-  }
+    padding: 7rem 5%;
+    color: #5B1B1A;
+    min-height: auto; /* Allow height to adjust to content */
+}
 
-  .container {
-    width: 40%;
-    margin: auto;
+.dentist-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Space between cards */
+    margin-top: 2rem;
+}
+
+.dentist-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 300px; /* Flexible width for cards */
+    max-width: 450px; /* Max width for each card */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dentist-card img {
+    height: 250px; /* Adjusted height for responsiveness */
+    width: 250px; /* Make it a circle */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid #5B1B1A; /* Border around image */
+}
+
+.dentist-card p {
+    font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+    color: #5B1B1A;
+    line-height: 1.6;
+}
+
+.dentist-card p img {
+    height: 24px; /* Size for Instagram icon */
+    width: auto;
+    border-radius: 0; /* Remove border-radius for icon */
+    border: none; /* Remove border for icon */
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #5B1B1A;
+    color: white;
+    padding: 15px 20px; /* Adjusted padding */
+    text-align: center;
+    font-size: 0.9rem;
+    width: 100%;
+    position: relative; /* Changed to relative as it's at the end of content */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Gap between footer info items */
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-info i {
+    font-size: 1rem;
+}
+
+/* Agendamento Page Styles */
+.appointment-container {
+    width: 90%; /* Responsive width */
+    max-width: 600px; /* Max width for the form */
+    margin: 40px auto;
     padding: 2rem;
     background-color: #5B1B1A;
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    margin-top: 20px;
 }
 
-  form {
+.page-title {
+    text-align: center;
+    flex: 1; /* Allows title to take available space */
+}
+
+.page-title h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: clamp(1.8rem, 4vw, 2.5rem); /* Responsive font size */
+}
+
+.appointment-subtitle {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+}
+
+.appointment-form {
     display: flex;
     flex-direction: column;
 }
 
-  label {
-    margin-top: 10px;
+.appointment-form label {
+    margin-top: 15px;
     color: white;
+    font-size: 1rem;
 }
 
-  input, select {
+.appointment-form input,
+.appointment-form select {
     background-color: #D9D9D9;
-    padding: 10px;
-    margin-top: 5px;
+    padding: 12px;
+    margin-top: 8px;
     border-radius: 35px;
     border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%; /* Ensure inputs take full width */
 }
 
-  button {
-    padding: 12px;
+.appointment-form select option.option-placeholder {
+    color: #888; /* Styling for placeholder option */
+}
+
+.form-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.appointment-form button {
+    padding: 12px 24px;
     border-radius: 35px;
-    width: 250px;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     cursor: pointer;
-    font-size: 1rem;
-    margin-top: 50px;
-   
-    
+    font-size: 1.1rem;
+    width: 250px; /* Fixed width for button */
+    border: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-  button:hover {
+.appointment-form button:hover {
     background-color: darkgreen;
     color: #ffffff;
-    transition: ease-in-out 0.2s;
 }
 
-.botao {
-  text-align: center;
-  border-radius: 35px;
+/* Media Queries for Responsiveness */
+
+/* Small devices (e.g., phones) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    header .logo {
+        margin-bottom: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-link, .nav-link-highlight {
+        width: 100%; /* Full width for nav links */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        padding: 4rem 20px 20px;
+        min-height: auto; /* Allow content to dictate height */
+        padding-top: 80px; /* Adjust for fixed header if present */
+    }
+
+    .hero-text {
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .hero-text span {
+        margin-bottom: 0.2rem;
+    }
+
+    .hero-icon {
+        transform: rotate(90deg); /* Rotate arrow for mobile */
+        display: inline-block; /* Ensure it stays in line with text */
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .results-images {
+        height: 350px; /* Adjust height for smaller screens */
+    }
+
+    .result-image {
+        max-width: 90%; /* Max width for images on smaller screens */
+        border-radius: 50px; /* Smaller border-radius */
+    }
+
+    .result-image-1 {
+        left: 5%; /* Adjusted positioning */
+        transform: translateY(-50%) translateX(-5%);
+    }
+
+    .result-image-2 {
+        right: 5%; /* Adjusted positioning */
+        transform: translateY(-50%) translateX(5%) rotate(2.5deg);
+    }
+
+    .about-section, .contact-section, .team-section {
+        padding: 4rem 20px; /* Reduced padding */
+        min-height: auto;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-text {
+        font-size: 1rem; /* Smaller font size */
+        text-align: justify;
+    }
+
+    .contact-prompt, .team-prompt {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .contact-form, .contact-info {
+        width: 100%;
+        max-width: 400px; /* Max width for form and info on smaller screens */
+    }
+
+    .contact-form button {
+        width: 100%; /* Full width button */
+    }
+
+    .contact-info p, .contact-subtitle {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .social-icons {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .social-icons a {
+        font-size: 2rem;
+        margin: 0 10px;
+    }
+
+    .dentist-card {
+        flex-basis: 100%; /* Each card takes full width */
+        max-width: 350px; /* Max width for cards */
+    }
+
+    .dentist-card img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .dentist-card p {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+
+    .footer-info {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .appointment-container {
+        width: 95%; /* Wider on smaller screens */
+        padding: 1.5rem;
+        border-radius: 30px;
+    }
+
+    .page-title h1, .appointment-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .appointment-form label {
+        font-size: 0.9rem;
+    }
+
+    .appointment-form input,
+    .appointment-form select {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .appointment-form button {
+        width: 200px;
+        font-size: 1rem;
+    }
 }
 
-.titulo {
-  margin: 0;                     
-  position: absolute;            
-  left: 50%;                     
-  transform: translateX(-50%);   
+/* Medium devices (e.g., tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        padding: 20px 30px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .hero-section {
+        padding: 6rem 30px;
+        flex-direction: row; /* Keep content in a row */
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .hero-text {
+        font-size: 3.5rem;
+        padding-left: 1rem;
+        flex: 1 1 50%;
+    }
+
+    .hero-icon {
+        font-size: 3rem;
+        transform: none; /* Reset rotation */
+    }
+
+    .results-images {
+        height: 400px;
+        max-width: 700px;
+    }
+
+    .result-image {
+        max-width: 500px;
+    }
+
+    .about-section, .contact-section, .team-section {
+        padding: 6rem 40px;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .section-text {
+        font-size: 1.2rem;
+    }
+
+    .contact-prompt, .team-prompt {
+        font-size: 1.8rem;
+    }
+
+    .contact-content {
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .contact-form {
+        flex: 1 1 300px;
+    }
+
+    .contact-info {
+        flex: 1 1 250px;
+    }
+
+    .social-icons a {
+        font-size: 2.5rem;
+    }
+
+    .dentist-card {
+        flex-basis: 45%; /* Two cards per row */
+        max-width: 400px;
+    }
+
+    .dentist-card img {
+        height: 220px;
+        width: 220px;
+    }
+
+    .appointment-container {
+        width: 70%;
+    }
 }
 
-.subtitulo {
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
+/* Large devices (e.g., desktops) */
+@media (min-width: 1025px) {
+    .results-images {
+        margin-right: 70px;
+    }
 
+    .result-image-1 {
+        right: 4vw;
+        top: auto;
+        transform: none;
+    }
 
-@media (max-width: 1015px) {
-
-  header{
-    justify-content: center
-  }
-
-  nav a{
-    display: none;
-  }
-
-  .secao-principal{
-    flex-direction: column;
-    height: 120vh;
-    padding-top: 1rem;
-  }
-
-  .texto-principal{
-    padding-top: 2rem;
-    padding-left: 1rem;
-    font-size: 50px;
-    flex-wrap: wrap;
-  }
-  
-  .texto-principal i{
-    transform: rotate(90deg);
-    padding-left: 3rem;
-    display: flex;
-    align-items: center;
-  }
-
-  .resultados{
-    padding-bottom: 5rem;
-  }
-  
-  .resultado-1{
-    width: 50vh;
-  }
-
-  .resultado-2{
-    width: 50vh;
-  }
-
-  .secao-secundaria{
-    height: 100vh;
-    padding: 2rem;
-  }
-
-  .titulo-secundario{
-    font-size: 40px;
-    padding-bottom: 2rem;
-  }
-
-  .texto-secundario{
-    font-size: 20px;
-    flex-wrap: wrap;
-  }
-
-  .secao-terciaria{
-    padding: 2rem;
-    flex-direction: column;
-    height: 180vh;
-  }
-
-  .info-contato{
-    padding-top: 1rem;
-    padding-left: 1rem;
-  }
-
-  .titulo-terciario{
-    font-size: 40px;
-  }
-
-  .fale{
-    font-size: 28px;
-  }
-
-  .text-3{
-    font-size: 20px;
-  }
-
-  .contato-container{
-    padding: 40px;
-  }
-
-  .sub-titulo2{
-    font-size: 29px;
-  }
-
-  .info-contato p{
-    font-size: 26px;
-  }
-
-  .social-icons a{
-    font-size: 40px;
-    padding-left: 2rem;
-  }
-  .equipe-container{
- padding: 40px; 
-}
-
-}
-.dentista{
-border-radius: 1px;
-padding: 3px;
-flex-direction: column;
-}
-
-.card-dent{
-  margin: 30px;
-  height: 400px;
-  width: 300px;
-  border-radius:30%;
-}
-
-.container-dent{
-  margin:30px;
-  display:flex;
-  align-items:initial;
-}
-.p-dent{
-  font-size: 33px;
-  display: flex;
-  align-items:flex-start;
-  color:#5B1B1A;
+    .result-image-2 {
+        top: 2vw;
+        left: 2vw;
+        transform: rotate(1.5deg);
+    }
 }
