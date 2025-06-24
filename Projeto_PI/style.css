@@ -1,4 +1,3 @@
-/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +23,7 @@ header {
     align-items: center;
     padding: 20px 40px;
     font-size: 1.5rem;
-    flex-wrap: wrap; /* Allows header items to wrap on smaller screens */
+    flex-wrap: wrap; 
 }
 
 header .logo img {
@@ -34,8 +33,8 @@ header .logo img {
 nav {
     display: flex;
     gap: 15px;
-    flex-wrap: wrap; /* Allows nav links to wrap */
-    justify-content: center; /* Center nav links on wrap */
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
 
 .nav-link, .nav-link-highlight {
@@ -65,25 +64,25 @@ nav {
     color: #F2F2F2;
 }
 
-/* Hero Section (secao-principal) */
+/* secao-principal */
 .hero-section {
     min-height: 100vh;
     display: flex;
-    justify-content: center; /* Centraliza tudo horizontalmente */
+    justify-content: center;
     align-items: center;
     padding: 6rem 40px 20px;
     background-color: #F2F2F2;
     flex-wrap: wrap;
-    gap: 450px; /* Espaço entre o texto e o carrossel */
+    gap: 13rem;
 }
 
 .hero-text {
     font-size: clamp(2.5rem, 6vw, 3.75rem);
     color: #000000;
     text-align: left;
-    flex: 0 1 400px; /* Largura mais controlada para centralizar melhor */
+    flex: 0 1 400px; 
     min-width: 300px;
-    padding-left: 0; /* Tiramos padding lateral pra evitar desalinhamento */
+    padding-left: 0; 
 }
 
 .hero-text span {
@@ -107,7 +106,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0; /* Removido margin-right negativo */
+    margin: 0; 
 }
 
 .carousel-container {
@@ -244,32 +243,32 @@ nav {
     width: 20px;
     filter: invert(100%);
 }
-/* Adicionado para responsividade em telas menores */
+
 @media (max-width: 992px) {
     .carousel-wrapper {
-        width: 100%; /* Ocupa toda a largura disponível */
+        width: 100%; 
         height: auto;
-        margin-right: 0; /* Remove o vazamento */
-        margin-left: 0; /* Centraliza normalmente */
+        margin-right: 0;
+        margin-left: 0; 
     }
 
     .carousel-container {
-        width: 350px; /* Ajuste para telas menores */
+        width: 350px; 
         height: 350px;
     }
 
     .carousel-controls {
-        justify-content: space-between; /* Mantém espaço entre os botões e pontos */
+        justify-content: space-between; 
         padding-right: 0;
-        width: 90%; /* Ajusta a largura dos controles */
-        max-width: 400px; /* Limita a largura dos controles */
+        width: 90%; 
+        max-width: 400px; 
     }
 
     .dots-container {
-        flex-grow: 0; /* Remove o crescimento em telas menores */
+        flex-grow: 0; 
     }
     
-    /* Redefine os transform para telas menores para evitar deslocamento excessivo */
+    
     .carousel-item.behind-1 {
         transform: translateX(10px) translateY(7px) rotateZ(3deg) scale(0.95);
         filter: blur(2px);
@@ -280,7 +279,7 @@ nav {
     }
     .carousel-item.behind-3,
     .carousel-item.behind-4 {
-        opacity: 0; /* Esconde mais rapidamente itens muito atrás */
+        opacity: 0; 
         pointer-events: none;
     }
 }
@@ -338,7 +337,7 @@ nav {
     .carousel-wrapper {
         width: 100%;
         height: auto;
-        margin-right: 0; /* Remove o margin-right em telas menores */
+        margin-right: 0;
         margin-top: var(--spacing-lg);
     }
 
@@ -397,12 +396,12 @@ nav {
     }
 }
 
-/* About Section (secao-secundaria) */
+/* Secao-secundaria */
 .about-section, .contact-section, .team-section {
-    background-color: #5B1B1A; /* Default background */
-    padding: 7rem 5%; /* Adjusted padding */
+    background-color: #5B1B1A; 
+    padding: 7rem 5%;
     color: #F2F2F2;
-    min-height: 100vh; /* Ensure section takes at least full viewport height */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -415,13 +414,13 @@ nav {
 
 
 .section-title {
-    font-size: clamp(2.5rem, 5vw, 3.75rem); /* Responsive font size */
+    font-size: clamp(2.5rem, 5vw, 3.75rem); 
     margin-bottom: 2rem;
-    color: inherit; /* Inherit color from parent section */
+    color: inherit; 
 }
 
 .section-text {
-    font-size: clamp(1rem, 2.5vw, 2rem); /* Responsive font size */
+    font-size: clamp(1rem, 2.5vw, 2rem); 
     line-height: 1.6;
 }
 
@@ -435,7 +434,7 @@ nav {
 .contact-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Adjusted for better spacing */
+    justify-content: space-around; 
     gap: 40px;
     padding: 20px 0;
 }
@@ -449,7 +448,7 @@ nav {
 .contact-form label {
     margin: 10px 0 5px;
     font-weight: bold;
-    color: inherit; /* Inherit color from parent section */
+    color: inherit; 
 }
 
 .contact-form input,
@@ -481,7 +480,7 @@ nav {
 }
 
 .contact-subtitle {
-    font-size: clamp(1.2rem, 2.5vw, 2rem); /* Responsive font size */
+    font-size: clamp(1.2rem, 2.5vw, 2rem); 
     color: #5B1B1A;
     margin-top: 1rem;
 }
@@ -494,7 +493,7 @@ nav {
 }
 
 .social-icons a {
-    font-size: clamp(2rem, 4vw, 3rem); /* Responsive icon size */
+    font-size: clamp(2rem, 4vw, 3rem); 
     margin-right: 15px;
     color: #000;
     text-decoration: none;
@@ -509,14 +508,14 @@ nav {
     background-color: #F2F2F2;
     padding: 7rem 5%;
     color: #5B1B1A;
-    min-height: auto; /* Allow height to adjust to content */
+    min-height: auto; 
 }
 
 .dentist-profiles {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px; /* Space between cards */
+    gap: 40px; 
     margin-top: 2rem;
 }
 
@@ -525,8 +524,8 @@ nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex: 1 1 300px; /* Flexible width for cards */
-    max-width: 450px; /* Max width for each card */
+    flex: 1 1 300px; 
+    max-width: 450px; 
     padding: 20px;
     background-color: #fff;
     border-radius: 15px;
@@ -534,12 +533,12 @@ nav {
 }
 
 .dentist-card img {
-    height: 250px; /* Adjusted height for responsiveness */
-    width: 250px; /* Make it a circle */
-    border-radius: 50%; /* Circular image */
+    height: 250px; 
+    width: 250px; 
+    border-radius: 50%; 
     object-fit: cover;
     margin-bottom: 1.5rem;
-    border: 3px solid #5B1B1A; /* Border around image */
+    border: 3px solid #5B1B1A; 
 }
 
 .dentist-card p {
@@ -549,10 +548,10 @@ nav {
 }
 
 .dentist-card p img {
-    height: 24px; /* Size for Instagram icon */
+    height: 3rem; 
     width: auto;
-    border-radius: 0; /* Remove border-radius for icon */
-    border: none; /* Remove border for icon */
+    border-radius: 0; 
+    border: none; 
     margin-top: 10px;
 }
 
@@ -560,15 +559,15 @@ nav {
 footer {
     background-color: #5B1B1A;
     color: white;
-    padding: 15px 20px; /* Adjusted padding */
+    padding: 15px 20px; 
     text-align: center;
     font-size: 0.9rem;
     width: 100%;
-    position: relative; /* Changed to relative as it's at the end of content */
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px; /* Gap between footer info items */
+    gap: 15px; 
 }
 
 .footer-info {
@@ -581,10 +580,10 @@ footer {
     font-size: 1rem;
 }
 
-/* Agendamento Page Styles */
+/* Página agendamento */
 .appointment-container {
-    width: 90%; /* Responsive width */
-    max-width: 600px; /* Max width for the form */
+    width: 90%; 
+    max-width: 600px; 
     margin: 40px auto;
     padding: 2rem;
     background-color: #5B1B1A;
@@ -594,13 +593,13 @@ footer {
 
 .page-title {
     text-align: center;
-    flex: 1; /* Allows title to take available space */
+    flex: 1; 
 }
 
 .page-title h1 {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-size: clamp(1.8rem, 4vw, 2.5rem); /* Responsive font size */
+    font-size: clamp(1.8rem, 4vw, 2.5rem); 
 }
 
 .appointment-subtitle {
@@ -630,11 +629,11 @@ footer {
     border-radius: 35px;
     border: 1px solid #ccc;
     font-size: 1rem;
-    width: 100%; /* Ensure inputs take full width */
+    width: 100%; 
 }
 
 .appointment-form select option.option-placeholder {
-    color: #888; /* Styling for placeholder option */
+    color: #888; 
 }
 
 .form-button-container {
@@ -649,7 +648,7 @@ footer {
     color: rgb(0, 0, 0);
     cursor: pointer;
     font-size: 1.1rem;
-    width: 250px; /* Fixed width for button */
+    width: 250px; 
     border: none;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
@@ -659,9 +658,7 @@ footer {
     color: #ffffff;
 }
 
-/* Media Queries for Responsiveness */
 
-/* Small devices (e.g., phones) */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -679,7 +676,7 @@ footer {
     }
 
     .nav-link, .nav-link-highlight {
-        width: 100%; /* Full width for nav links */
+        width: 100%; 
         text-align: center;
         padding: 10px 0;
     }
@@ -687,8 +684,8 @@ footer {
     .hero-section {
         flex-direction: column;
         padding: 4rem 20px 20px;
-        min-height: auto; /* Allow content to dictate height */
-        padding-top: 80px; /* Adjust for fixed header if present */
+        min-height: auto; 
+        padding-top: 80px; 
     }
 
     .hero-text {
@@ -702,33 +699,33 @@ footer {
     }
 
     .hero-icon {
-        transform: rotate(90deg); /* Rotate arrow for mobile */
-        display: inline-block; /* Ensure it stays in line with text */
+        transform: rotate(90deg); 
+        display: inline-block; 
         margin-left: 0;
         margin-top: 10px;
     }
 
     .results-images {
-        height: 350px; /* Adjust height for smaller screens */
+        height: 350px; 
     }
 
     .result-image {
-        max-width: 90%; /* Max width for images on smaller screens */
-        border-radius: 50px; /* Smaller border-radius */
+        max-width: 90%; 
+        border-radius: 50px;
     }
 
     .result-image-1 {
-        left: 5%; /* Adjusted positioning */
+        left: 5%; 
         transform: translateY(-50%) translateX(-5%);
     }
 
     .result-image-2 {
-        right: 5%; /* Adjusted positioning */
+        right: 5%; 
         transform: translateY(-50%) translateX(5%) rotate(2.5deg);
     }
 
     .about-section, .contact-section, .team-section {
-        padding: 4rem 20px; /* Reduced padding */
+        padding: 4rem 20px; 
         min-height: auto;
     }
 
@@ -738,7 +735,7 @@ footer {
     }
 
     .section-text {
-        font-size: 1rem; /* Smaller font size */
+        font-size: 1rem; 
         text-align: justify;
     }
 
@@ -755,11 +752,11 @@ footer {
 
     .contact-form, .contact-info {
         width: 100%;
-        max-width: 400px; /* Max width for form and info on smaller screens */
+        max-width: 400px; 
     }
 
     .contact-form button {
-        width: 100%; /* Full width button */
+        width: 100%; 
     }
 
     .contact-info p, .contact-subtitle {
@@ -778,8 +775,8 @@ footer {
     }
 
     .dentist-card {
-        flex-basis: 100%; /* Each card takes full width */
-        max-width: 350px; /* Max width for cards */
+        flex-basis: 100%; 
+        max-width: 350px; 
     }
 
     .dentist-card img {
@@ -803,7 +800,7 @@ footer {
     }
 
     .appointment-container {
-        width: 95%; /* Wider on smaller screens */
+        width: 95%; 
         padding: 1.5rem;
         border-radius: 30px;
     }
@@ -828,7 +825,6 @@ footer {
     }
 }
 
-/* Medium devices (e.g., tablets) */
 @media (min-width: 769px) and (max-width: 1024px) {
     header {
         padding: 20px 30px;
@@ -840,7 +836,7 @@ footer {
 
     .hero-section {
         padding: 6rem 30px;
-        flex-direction: row; /* Keep content in a row */
+        flex-direction: row; 
         justify-content: space-around;
         align-items: center;
     }
@@ -853,7 +849,7 @@ footer {
 
     .hero-icon {
         font-size: 3rem;
-        transform: none; /* Reset rotation */
+        transform: none; 
     }
 
     .results-images {
@@ -899,7 +895,7 @@ footer {
     }
 
     .dentist-card {
-        flex-basis: 45%; /* Two cards per row */
+        flex-basis: 45%; 
         max-width: 400px;
     }
 
@@ -913,7 +909,6 @@ footer {
     }
 }
 
-/* Large devices (e.g., desktops) */
 @media (min-width: 1025px) {
     .results-images {
         margin-right: 70px;
