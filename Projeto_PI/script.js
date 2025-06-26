@@ -6,7 +6,7 @@
             resposta.style.maxHeight = resposta.style.maxHeight ? null : resposta.scrollHeight + 'px';
         });
     });
-    //para abrir os accordions
+   
 
     document.addEventListener('DOMContentLoaded', () => {
     const carouselSlide = document.querySelector('.carousel-slide');
@@ -18,12 +18,10 @@
     let currentIndex = 0;
     const totalItems = carouselItems.length;
 
-    // Função para atualizar as classes de cada item do carrossel
     function updateCarouselItems() {
         carouselItems.forEach((item, index) => {
             item.classList.remove('active', 'behind-1', 'behind-2', 'behind-3', 'behind-4', 'hidden');
 
-            // Calcula a distância relativa para aplicar as classes
             const distance = index - currentIndex;
 
             if (distance === 0) {
@@ -37,24 +35,23 @@
             } else if (distance === 4) {
                 item.classList.add('behind-4');
             } else {
-                item.classList.add('hidden'); // Esconde itens que estão muito atrás ou na frente
+                item.classList.add('hidden'); 
             }
 
-            // Garante que o z-index é aplicado no momento certo para a transição
-            // Invertemos a ordem do z-index para que as cartas "behind" fiquem por baixo
+
             if (index === currentIndex) {
-                item.style.zIndex = totalItems + 1; // Ativo sempre na frente
+                item.style.zIndex = totalItems + 1; 
             } else if (index > currentIndex) {
-                item.style.zIndex = totalItems - distance; // Itens atrás do ativo (menor z-index)
-            } else { // Itens que já passaram e estão "na frente" do ativo (loop)
-                item.style.zIndex = totalItems - (totalItems - Math.abs(distance)); // Ainda visíveis mas com menor z-index
+                item.style.zIndex = totalItems - distance; 
+            } else { 
+                item.style.zIndex = totalItems - (totalItems - Math.abs(distance)); 
             }
         });
     }
 
-    // Função para gerar os pontos de navegação
+    
     function createDots() {
-        dotsContainer.innerHTML = ''; // Limpa os pontos existentes
+        dotsContainer.innerHTML = ''; 
         carouselItems.forEach((_, index) => {
             const dot = document.createElement('div');
             dot.classList.add('dot');
@@ -70,7 +67,7 @@
         });
     }
 
-    // Função para atualizar o estado ativo dos pontos
+    
     function updateDots() {
         const dots = document.querySelectorAll('.dot');
         dots.forEach((dot, index) => {
@@ -82,21 +79,20 @@
         });
     }
 
-    // Event Listener para o botão "Próximo"
+   
     nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % totalItems; // Loop infinito
+        currentIndex = (currentIndex + 1) % totalItems; 
         updateCarouselItems();
         updateDots();
     });
 
-    // Event Listener para o botão "Anterior"
+  
     prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Loop infinito reverso
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
         updateCarouselItems();
         updateDots();
     });
 
-    // Inicializa o carrossel ao carregar a página
     createDots();
-    updateCarouselItems(); // Aplica as classes iniciais
+    updateCarouselItems();
 });
