@@ -21,9 +21,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 15px 20px;
     font-size: 1.5rem;
     flex-wrap: wrap; 
+    flex-direction: column;
+    gap: 15px;
 }
 
 header .logo img {
@@ -34,15 +36,18 @@ nav {
     display: flex;
     gap: 15px;
     flex-wrap: wrap; 
-    justify-content: center; 
+    justify-content: center;
+    width: 100%; 
 }
 
 .nav-link, .nav-link-highlight {
     color: white;
     text-decoration: none;
     padding: 10px 15px;
+    font-size: 1rem;
     border-radius: 15px;
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+    white-space: nowrap;
 }
 
 .nav-link {
@@ -64,6 +69,7 @@ nav {
     color: #F2F2F2;
 }
 
+
 /* secao-principal */
 .hero-section {
     min-height: 100vh;
@@ -73,14 +79,15 @@ nav {
     padding: 6rem 40px 20px;
     background-color: #F2F2F2;
     flex-wrap: wrap;
-    gap: 13rem;
+    gap: 2rem;
+    flex-direction: column;
 }
 
 .hero-text {
     font-size: clamp(2.5rem, 6vw, 3.75rem);
     color: #000000;
     text-align: left;
-    flex: 0 1 400px; 
+    flex: 1 1 100%; 
     min-width: 300px;
     padding-left: 0; 
 }
@@ -100,20 +107,25 @@ nav {
 /* Carrossel */
 .carousel-wrapper {
     position: relative;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0; 
+    margin: 0 auto; 
 }
 
+
 .carousel-container {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    aspect-ratio: 1/1;
     perspective: 1000px;
     position: relative;
+    margin: 0 auto;
 }
 
 .carousel-slide {
@@ -191,8 +203,10 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-top: 3rem;
+    max-width: 500px;
+    margin-top: 1.5rem;
 }
+
 
 .dots-container {
     display: flex;
@@ -924,6 +938,39 @@ footer {
         top: 2vw;
         left: 2vw;
         transform: rotate(1.5deg);
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+    
+    nav {
+        width: auto;
+        gap: 15px;
+    }
+}
+@media (min-width: 992px) {
+    .hero-section {
+        flex-direction: row;
+        gap: 5rem;
+        padding: 6rem 40px;
+    }
+    
+    .hero-text {
+        text-align: left;
+        flex: 0 1 400px;
+    }
+}
+@media (max-width: 480px) {
+    .carousel-item.behind-1 {
+        transform: translateX(5px) translateY(5px) rotateZ(2deg) scale(0.95);
+    }
+    .carousel-item.behind-2 {
+        transform: translateX(10px) translateY(10px) rotateZ(4deg) scale(0.9);
     }
 }
 

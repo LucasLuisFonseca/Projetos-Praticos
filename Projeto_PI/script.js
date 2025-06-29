@@ -96,3 +96,9 @@
     createDots();
     updateCarouselItems();
 });
+    window.addEventListener('resize', function() {
+        const carouselContainer = document.querySelector('.carousel-container');
+        if (carouselContainer) {
+            carouselContainer.style.height = carouselContainer.offsetWidth + 'px';
+    }
+});
