@@ -205,6 +205,7 @@ nav {
     width: 100%;
     max-width: 500px;
     margin-top: 1.5rem;
+    padding-top: 1.5rem;
 }
 
 
@@ -952,6 +953,12 @@ footer {
         width: auto;
         gap: 15px;
     }
+    .carousel-container {
+        margin-bottom: 2rem;
+    }
+    
+    .carousel-controls {
+        margin-top: 1.5rem;
 }
 @media (min-width: 992px) {
     .hero-section {
@@ -973,7 +980,6 @@ footer {
         transform: translateX(10px) translateY(10px) rotateZ(4deg) scale(0.9);
     }
 }
-
 .faq {
     background-color: #F2F2F2;
     padding: 5rem 2rem;
