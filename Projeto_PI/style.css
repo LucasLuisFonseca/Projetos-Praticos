@@ -960,6 +960,7 @@ footer {
     .carousel-controls {
         margin-top: 1.5rem;
 }
+}
 @media (min-width: 992px) {
     .hero-section {
         flex-direction: row;
